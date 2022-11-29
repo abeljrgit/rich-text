@@ -51,6 +51,10 @@ class _MyHomePageState extends State<MyHomePage> {
             onChanged: (value) {
               setState(() {
                 _markdownRawValuetextFieldController.text = value;
+                _markdownRawValuetextFieldController.selection =
+                    TextSelection.fromPosition(TextPosition(
+                        offset:
+                            _markdownRawValuetextFieldController.text.length));
               });
             },
           ),
